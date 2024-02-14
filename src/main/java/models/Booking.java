@@ -5,7 +5,6 @@ public class Booking {
     private int customerId;
     private int tripId;
     private java.sql.Date bookingDate;
-    private String status;
 
     public Booking() {
     }
@@ -15,7 +14,6 @@ public class Booking {
         setCustomerId(customerId);
         setTripId(tripId);
         setBookingDate(bookingDate);
-        setStatus(status);
     }
 
     public void setBookingId(int bookingId) {
@@ -30,9 +28,6 @@ public class Booking {
     public void setBookingDate(java.sql.Date bookingDate) {
         this.bookingDate = bookingDate;
     }
-    public void setStatus(String status) {
-        this.status = status;
-    }
 
     public int getBookingId() {
         return bookingId;
@@ -46,9 +41,6 @@ public class Booking {
     public java.sql.Date getBookingDate() {
         return bookingDate;
     }
-    public String getStatus() {
-        return status;
-    }
 
 
     @Override
@@ -56,7 +48,6 @@ public class Booking {
         return "Booking: " + bookingId +
                 " customerId " + customerId +
                 " tripId " + tripId +
-                " bookingDate " + bookingDate +
-                " status " + status;
+                " bookingDate " + bookingDate;
     }
 }

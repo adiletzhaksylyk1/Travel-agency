@@ -13,7 +13,6 @@ public class Agent {
         this.agentId = agentId;
         this.name = name;
         this.email = email;
-        this.phoneNumber = phoneNumber;
     }
 
     public void setAgentId(int agentId) {
@@ -25,9 +24,6 @@ public class Agent {
     public void setEmail(String email) {
         this.email = email;
     }
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
 
     public int getAgentId() {
         return agentId;
@@ -38,16 +34,12 @@ public class Agent {
     public String getEmail() {
         return email;
     }
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
 
     @Override
     public String toString() {
         return "Agent: " + agentId +
                 " " + name + '\'' +
-                " email: " + email + '\'' +
-                "phoneNumber: " + phoneNumber;
+                " email: " + email;
     }
 }
 

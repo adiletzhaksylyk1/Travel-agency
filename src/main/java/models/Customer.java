@@ -1,8 +1,6 @@
 package models;
 
-import interfaces.DataAccessCustomer;
-
-public abstract class Customer implements DataAccessCustomer {
+public abstract class Customer {
     private int customerId;
     private String firstName;
     private String lastName;
@@ -16,7 +14,6 @@ public abstract class Customer implements DataAccessCustomer {
         setFirstName(firstName);
         setLastName(lastName);
         setEmail(email);
-        setPhoneNumber(phoneNumber);
     }
 
     public void setCustomerId(int customerId){
@@ -33,13 +30,10 @@ public abstract class Customer implements DataAccessCustomer {
         this.email = email;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-    public int getCustomerId(int customerId){
+    public int getCustomerId(){
         return customerId;
     }
-    public String getFirstName(String firstName){
+    public String getFirstName(){
         return firstName;
     }
 
@@ -51,9 +45,6 @@ public abstract class Customer implements DataAccessCustomer {
         return email;
     }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
 
     @Override
     public String toString() {
