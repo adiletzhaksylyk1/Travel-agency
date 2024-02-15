@@ -1,16 +1,18 @@
 package models;
 
+import java.math.BigDecimal;
+
 public class Payment {
     private int paymentId;
     private int bookingId;
-    private double amount;
+    private BigDecimal amount;
     private java.sql.Date paymentDate;
     private String paymentMethod;
 
     public Payment() {
     }
 
-    public Payment(int paymentId, int bookingId, double amount, java.sql.Date paymentDate, String paymentMethod) {
+    public Payment(int paymentId, int bookingId, BigDecimal amount, java.sql.Date paymentDate, String paymentMethod) {
         setPaymentId(paymentId);
         setBookingId(bookingId);
         setAmount(amount);
@@ -35,11 +37,11 @@ public class Payment {
         this.bookingId = bookingId;
     }
 
-    public double getAmount() {
+    public BigDecimal getAmount() {
         return amount;
     }
 
-    public void setAmount(double amount) {
+    public void setAmount(BigDecimal amount) {
         this.amount = amount;
     }
 
